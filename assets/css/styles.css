@@ -62,8 +62,9 @@ p{margin:0}
 .pill span{background:var(--lime);color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:600}
 .hero h1{font-size:clamp(40px,6.2vw,72px);line-height:1.06;font-weight:700;letter-spacing:-.022em;max-width:900px;text-wrap:balance}
 .sun-dot{display:inline-flex;align-items:center;justify-content:center;width:.9em;height:.9em;border-radius:999px;background:var(--ink);vertical-align:-.08em}
-.hero .lead{font-size:19px;line-height:1.65;color:var(--ink-2);max-width:620px;text-wrap:balance}
-.hero .lead strong{color:var(--ink);font-weight:600}
+.hero .lead{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:600px}
+.hero .lead strong,.hero .lead em{color:var(--ink)}
+.hero .lead em{font-family:'Instrument Serif',Georgia,serif;font-size:1.15em}
 .hero-media{position:relative;width:100%;margin:0;padding:0}
 .photo{position:relative;border-radius:28px 28px 0 0;overflow:hidden;box-shadow:0 30px 60px rgba(17,20,24,.18)}
 .hero-media .photo{border-radius:0;box-shadow:none}
