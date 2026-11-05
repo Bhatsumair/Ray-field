@@ -65,9 +65,9 @@ p{margin:0}
 .hero .lead{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:600px}
 .hero .lead strong,.hero .lead em{color:var(--ink)}
 .hero .lead em{font-family:'Instrument Serif',Georgia,serif;font-size:1.15em}
-.hero-media{position:relative;width:100%;margin:0;padding:0}
+.hero-media{position:relative;width:100%;margin:0;padding:0 clamp(12px,3vw,40px)}
 .photo{position:relative;border-radius:28px 28px 0 0;overflow:hidden;box-shadow:0 30px 60px rgba(17,20,24,.18)}
-.hero-media .photo{border-radius:0;box-shadow:none}
+.hero-media .photo{border-radius:clamp(18px,2vw,28px) clamp(18px,2vw,28px) 0 0;box-shadow:0 30px 60px rgba(17,20,24,.18)}
 .photo img{width:100%;height:clamp(340px,50vw,760px);object-fit:cover;object-position:center 40%;animation:kb 9s ease-out forwards}
 .flare{position:absolute;left:45%;top:27%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95) 0%,rgba(255,240,190,.6) 22%,rgba(255,230,150,0) 65%);mix-blend-mode:screen;animation:flare 3.5s ease-in-out infinite;pointer-events:none}
 .sweep{position:absolute;inset:0 auto 0 0;width:30%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.28),rgba(255,255,255,0));animation:sweep 6s ease-in-out 2s infinite;pointer-events:none}
