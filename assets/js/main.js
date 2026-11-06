@@ -58,7 +58,7 @@
         if (bad && ok) { f.focus(); ok = false; }
       });
       if (!ok) return;
-      var data = new FormData(form), lines = ['Hello Ray Field, I would like a solar quote.'];
+      var data = new FormData(form), lines = ['Hello Ray Field Solar, I would like a solar quote.'];
       data.forEach(function (v, k) { if (String(v).trim()) lines.push(k + ': ' + v); });
       var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
       var status = form.querySelector('.form-status');

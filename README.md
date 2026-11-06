@@ -1,4 +1,4 @@
-# Ray Field Energy website
+# Ray Field Solar Energy website
 
 A static website (plain HTML, CSS and JavaScript). There is nothing to install. Open `index.html` in a browser to view it.
 
