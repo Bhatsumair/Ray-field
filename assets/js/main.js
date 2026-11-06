@@ -66,6 +66,19 @@
     nums.forEach(function (el) { co.observe(el); });
   }
 
+  // Keep the hero energy overlay aligned with the cover-cropped photo
+  var hp = document.querySelector('.hero-media .photo');
+  var esvg = hp && hp.querySelector('svg.energy');
+  var eimg = hp && hp.querySelector('img');
+  function fitEnergy() {
+    if (!esvg || !eimg) return;
+    var W = eimg.clientWidth, H = eimg.clientHeight, s = Math.max(W / 1800, H / 1413);
+    var x = (W - 1800 * s) * 0.5, y = (H - 1413 * s) * 0.4;
+    esvg.setAttribute('viewBox', (-x / s) + ' ' + (-y / s) + ' ' + (W / s) + ' ' + (H / s));
+    esvg.style.height = H + 'px';
+  }
+  if (esvg) { fitEnergy(); window.addEventListener('resize', fitEnergy); if (eimg && !eimg.complete) eimg.addEventListener('load', fitEnergy); }
+
   // Footer year
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 

@@ -266,3 +266,17 @@ form.quote button{justify-content:center;padding:15px}
 @media (max-width:560px){.stats .stat{padding:20px 16px 18px}.stat-ic{width:34px;height:34px;margin-bottom:12px}.stats .stat b{font-size:34px;white-space:nowrap}.stats .stat > span:last-child{font-size:13px}}
 .stats .stat b .num{font-size:1em;color:transparent;font-weight:inherit;letter-spacing:inherit}
 .stats .stat b i{color:transparent}
+
+/* Hero: solar energy flowing from the panels into the home */
+.sweep{display:none}
+.energy{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;animation:kb 9s ease-out forwards;overflow:visible}
+.energy .panels-glow{fill:#BFE3FF;opacity:0;mix-blend-mode:screen;animation:charge 5.2s ease-in-out 1.4s infinite}
+.energy .panel-ripple{fill:none;stroke:#E9FF8A;stroke-width:10;opacity:0;transform-box:fill-box;transform-origin:center;animation:ripple 5.2s ease-out 1.4s infinite}
+.energy .wire{fill:none;stroke:#D8F24A;stroke-width:4;stroke-linecap:round;stroke-dasharray:2 16;opacity:.55;animation:flow 1.2s linear infinite}
+.energy .spark{fill:#F4FFB0;opacity:0}
+.energy .node{fill:none;stroke:#D8F24A;stroke-width:5;transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}
+@keyframes charge{0%,100%{opacity:0}35%{opacity:.42}60%{opacity:.12}}
+@keyframes ripple{0%{opacity:0;transform:scale(.2)}8%{opacity:.9}55%{opacity:0;transform:scale(14)}100%{opacity:0;transform:scale(14)}}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@keyframes ping{0%{opacity:.9;transform:scale(.5)}100%{opacity:0;transform:scale(2.4)}}
+@media (prefers-reduced-motion:reduce){.energy{display:none}}
