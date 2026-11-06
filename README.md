@@ -22,5 +22,5 @@ Search all `.html` files for these placeholders and replace them:
 In `assets/js/main.js`, set `WHATSAPP_NUMBER` (digits only). The quote form sends the visitor's details to that WhatsApp number.
 
 ## Check before launch
-- Stats (20+ installations, 5 MW+, 24–48 h replacement) and the MCA, KPDCL and Rayzon registrations were taken from andsray.in. Make sure Ray Field can honestly claim each one.
+- Stats (20+ installations, 5 MW+, 24–48 h replacement) and the MCA and KPDCL registrations were taken from andsray.in. Make sure Ray Field can honestly claim each one.
 - The hero photo is AI-generated. Use it as an illustration, not as a completed project.
