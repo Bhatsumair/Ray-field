@@ -13,7 +13,6 @@ A static website (plain HTML, CSS and JavaScript). There is nothing to install. 
 Search all `.html` files for these placeholders and replace them:
 - `[PHONE NUMBER]`: phone number as shown, e.g. +91 98765 43210
 - `[PHONE]`: the same number for tap-to-call, e.g. +919876543210
-- `[EMAIL]`: email address
 - `[FULL ADDRESS]`: office address
 - `[WHATSAPP]`: WhatsApp number, digits only, e.g. 919876543210
 - `[INSTAGRAM URL]` and `[LINKEDIN URL]`: social profile links
