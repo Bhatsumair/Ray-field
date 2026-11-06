@@ -13,10 +13,8 @@ A static website (plain HTML, CSS and JavaScript). There is nothing to install. 
 Search all `.html` files for these placeholders and replace them:
 - `[PHONE NUMBER]`: phone number as shown, e.g. +91 98765 43210
 - `[PHONE]`: the same number for tap-to-call, e.g. +919876543210
-- `[FULL ADDRESS]`: office address
 - `[WHATSAPP]`: WhatsApp number, digits only, e.g. 919876543210
 - `[INSTAGRAM URL]` and `[LINKEDIN URL]`: social profile links
-- `[MAP+SEARCH+TEXT]` in `contact.html`: your address with `+` between words, for the Google map
 
 In `assets/js/main.js`, set `WHATSAPP_NUMBER` (digits only). The quote form sends the visitor's details to that WhatsApp number.
 
