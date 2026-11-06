@@ -42,6 +42,28 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
+  // Count-up for stat numbers
+  var nums = document.querySelectorAll('.num[data-count]');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (nums.length && 'IntersectionObserver' in window && !reduce) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target, end = +el.dataset.count, t0 = null;
+        co.unobserve(el);
+        function step(t) {
+          if (!t0) t0 = t;
+          var p = Math.min((t - t0) / 1400, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        el.textContent = '0';
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    nums.forEach(function (el) { co.observe(el); });
+  }
+
   // Footer year
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
