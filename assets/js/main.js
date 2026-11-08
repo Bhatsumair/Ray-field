@@ -5,6 +5,8 @@
   var WHATSAPP_NUMBER = 'WHATSAPP_NUMBER';
   // Inbox that receives website enquiries (via formsubmit.co).
   var FORM_EMAIL = 'rayfieldsolarenergy@gmail.com';
+  // Extra inbox that gets a copy of every enquiry (comma-separate to add more).
+  var FORM_CC = 'danish@rayfieldenergy.in';
   // ======================
 
   document.documentElement.classList.remove('no-js');
@@ -100,6 +102,7 @@
         _template: 'table',
         _captcha: 'false'
       };
+      if (FORM_CC) payload._cc = FORM_CC;
       data.forEach(function (v, k) { if (String(v).trim()) payload[k] = v; });
       var status = form.querySelector('.form-status');
       var btn = form.querySelector('button[type="submit"], button:not([type])');
