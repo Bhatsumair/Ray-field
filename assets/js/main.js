@@ -118,8 +118,10 @@
           if (status) status.textContent = 'Thank you! Your enquiry has been sent. Our team will contact you shortly.';
           form.reset();
         })
-        .catch(function () {
-          if (status) status.textContent = 'Sorry, something went wrong. Please email us at ' + FORM_EMAIL + ' or call us directly.';
+        .catch(function (err) {
+          // Show FormSubmit's own reason (e.g. "This form needs Activation") so problems are easy to spot.
+          var why = err && err.message && err.message !== 'failed' ? ' (' + err.message + ')' : '';
+          if (status) status.textContent = 'Sorry, something went wrong. Please email us at ' + FORM_EMAIL + ' or call us directly.' + why;
         })
         .then(function () { if (btn) btn.disabled = false; });
     });
