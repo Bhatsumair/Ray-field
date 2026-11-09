@@ -10,13 +10,10 @@ A static website (plain HTML, CSS and JavaScript). There is nothing to install. 
 - `contact.html`: Contact, with quote form, map and FAQ
 
 ## Fill these in before going live
-Search all `.html` files for these placeholders and replace them:
-- `[PHONE NUMBER]`: phone number as shown, e.g. +91 98765 43210
-- `[PHONE]`: the same number for tap-to-call, e.g. +919876543210
-- `[WHATSAPP]`: WhatsApp number, digits only, e.g. 919876543210
-- `[INSTAGRAM URL]` and `[LINKEDIN URL]`: social profile links
+Phone and WhatsApp are set to +91 90864 56925 (tap-to-call `tel:+919086456925`, WhatsApp `wa.me/919086456925`, and `WHATSAPP_NUMBER` in `assets/js/main.js`).
 
-In `assets/js/main.js`, set `WHATSAPP_NUMBER` (digits only). The quote form sends the visitor's details to that WhatsApp number.
+Still to replace in all `.html` files:
+- `[INSTAGRAM URL]` and `[LINKEDIN URL]`: social profile links
 
 ## Check before launch
 - Stats (20+ installations, 5 MW+, 24–48 h replacement) and the MCA and KPDCL registrations were taken from andsray.in. Make sure Ray Field can honestly claim each one.

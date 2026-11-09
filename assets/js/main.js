@@ -2,7 +2,7 @@
 (function () {
   // ===== EDIT THESE =====
   // WhatsApp number in international format, digits only (e.g. 919876543210).
-  var WHATSAPP_NUMBER = 'WHATSAPP_NUMBER';
+  var WHATSAPP_NUMBER = '919086456925';
   // Inbox that receives website enquiries (via formsubmit.co).
   var FORM_EMAIL = 'rayfieldsolarenergy@gmail.com';
   // Extra inbox that gets a copy of every enquiry (comma-separate to add more).
