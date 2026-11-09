@@ -5,6 +5,8 @@
   var WHATSAPP_NUMBER = '919086456925';
   // Inbox that receives website enquiries (via formsubmit.co).
   var FORM_EMAIL = 'rayfieldsolarenergy@gmail.com';
+  // Extra inbox that gets a copy of every enquiry (comma-separate to add more).
+  var FORM_CC = 'danish@rayfieldenergy.in';
   // ======================
 
   document.documentElement.classList.remove('no-js');
@@ -100,6 +102,7 @@
         _template: 'table',
         _captcha: 'false'
       };
+      if (FORM_CC) payload._cc = FORM_CC;
       data.forEach(function (v, k) { if (String(v).trim()) payload[k] = v; });
       var status = form.querySelector('.form-status');
       var btn = form.querySelector('button[type="submit"], button:not([type])');
@@ -115,8 +118,10 @@
           if (status) status.textContent = 'Thank you! Your enquiry has been sent. Our team will contact you shortly.';
           form.reset();
         })
-        .catch(function () {
-          if (status) status.textContent = 'Sorry, something went wrong. Please email us at ' + FORM_EMAIL + ' or call us directly.';
+        .catch(function (err) {
+          // Show FormSubmit's own reason (e.g. "This form needs Activation") so problems are easy to spot.
+          var why = err && err.message && err.message !== 'failed' ? ' (' + err.message + ')' : '';
+          if (status) status.textContent = 'Sorry, something went wrong. Please email us at ' + FORM_EMAIL + ' or call us directly.' + why;
         })
         .then(function () { if (btn) btn.disabled = false; });
     });
